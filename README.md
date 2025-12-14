@@ -37,8 +37,7 @@ Monetrix is an AI-powered financial intelligence platform designed to help busin
 
 ### Backend
 - **Node.js**: Runtime environment.
-- **Express.js**: Web server framework for handling API routes (`/auth`, `/analysis`).
-- **MongoDB & Mongoose**: NoSQL database for storing user profiles and financial history.
+- **MongoDB & Mongoose**: NoSQL database for storing user profiles and financial history
 - **JWT (JSON Web Tokens)**: For secure, stateless authentication.
 
 ## ⚙️ Installation & Setup
@@ -77,7 +76,4 @@ Monetrix is an AI-powered financial intelligence platform designed to help busin
 1.  **Landing Page**: Explore features and sign in.
 2.  **Analyzer Dashboard**: Enter your Revenue, COGS, and Expenses data.
 3.  **View Reports**: Scroll down to see calculated metrics and visual charts.
-4.  **Ask AI**: Click the floating bot icon in the bottom-right to ask questions like "How can I improve my Net Margin?".
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
+4.  **Ask AI**: Click the floating bot icon in the bottom-right to ask questions like "What is COGS?"
