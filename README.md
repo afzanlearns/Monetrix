@@ -1,5 +1,4 @@
-![Status](https://img.shields.io/badge/status-active-success)
-![License](https://img.shields.io/badge/license-MIT-blue)
+
 ![Tech](https://img.shields.io/badge/stack-MERN-informational)
 ![AI](https://img.shields.io/badge/AI-powered-purple)
 ![UI](https://img.shields.io/badge/UI-premium-darkviolet)
@@ -8,7 +7,6 @@
 
 Monetrix is an AI-powered financial intelligence platform designed to help businesses automate their Profit & Loss (P&L) analysis. By combining traditional financial metrics with advanced AI insights, Monetrix transforms raw data into actionable business intelligence.
 
-![Monetrix Hero](frontend/assets/logo.svg)
 
 ## 🚀 Key Features
 
