@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monetrix Analyzer</title>
+
+    <link rel="stylesheet" href="analyzer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav">
+    <div class="nav-left">
+       <a href="index.html" class="brand-link">
+  <span class="brand-name">Monetrix</span>
+</a>
+    </div>
+
+    <div class="nav-right">
+        <button id="download-pdf" class="nav-btn">
+            <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <!-- Document -->
+  <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+  <path d="M14 3v6h6"/>
+
+  <!-- Download arrow -->
+  <path d="M12 11v6"/>
+  <path d="M9 14l3 3 3-3"/>
+</svg>
+
+            Download PDF
+        </button>
+        <button id="download-json" class="nav-btn">
+          <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <!-- Braces -->
+  <path d="M8 4c-2 0-3 1-3 3v2c0 1-1 2-2 2 1 0 2 1 2 2v2c0 2 1 3 3 3"/>
+  <path d="M16 4c2 0 3 1 3 3v2c0 1 1 2 2 2-1 0-2 1-2 2v2c0 2-1 3-3 3"/>
+
+  <!-- Download arrow -->
+  <path d="M12 7v8"/>
+  <path d="M9 12l3 3 3-3"/>
+</svg>
+
+            Download JSON
+        </button>
+
+        <div class="profile-section">
+            <div class="profile-box">
+                <div class="profile-avatar">
+                    <span id="profile-initial">U</span>
+                </div>
+                <div class="profile-info">
+                    <span id="profile-name" class="profile-name">User</span>
+                    <span id="profile-email" class="profile-email">user@example.com</span>
+                </div>
+            </div>
+            <button id="logout-btn" class="nav-btn logout-btn">
+                Logout
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Guest Mode Banner -->
+<div id="guest-banner" class="guest-banner" style="display: none;">
+    <div class="guest-banner-content">
+        <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width="26.36"
+  height="28"
+  fill="none"
+  stroke="#ffffff"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <!-- Outer circle -->
+  <circle cx="12" cy="12" r="9" />
+
+  <!-- Info stem -->
+  <path d="M12 11.5v4" />
+
+  <!-- Info dot -->
+  <circle cx="12" cy="8.5" r="0.7" />
+</svg>
+
+        <span class="guest-banner-text">You're using Monetrix in guest mode. <a href="index.html#home">Sign in</a> to save your analyses and access historical data.</span>
+        <button class="guest-banner-close" onclick="document.getElementById('guest-banner').style.display='none'">×</button>
+    </div>
+</div>
+
+<!-- ================= MAIN WRAPPER ================= -->
+<div class="container">
+    <!-- ********** INPUT SECTION ********** -->
+    <section class="inputs-section">
+        <div class="section-header">
+            <h2 class="section-title">Financial Inputs</h2>
+            <p class="section-subtitle">Enter your business financial data</p>
+        </div>
+
+        <!-- Business Info Card -->
+        <div class="input-card">
+            <div class="card-header">
+              <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="3" width="16" height="16" rx="2"/>
+  <path d="M8 7h8"/>
+  <path d="M8 11h8"/>
+  <path d="M8 15h5"/>
+</svg>
+
+                <h3>Business Details</h3>
+            </div>
+            <div class="input-group">
+                <label for="businessName">Business Name</label>
+                <input type="text" id="businessName" placeholder="Enter business name">
+            </div>
+            <div class="input-group">
+                <label for="periodLabel">Period Label</label>
+                <input type="text" id="periodLabel" placeholder="e.g., January 2025">
+            </div>
+        </div>
+
+        <!-- Revenue Card -->
+        <div class="input-card">
+            <div class="card-header">
+                <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 21V3"/>
+  <path d="M7 8l5-5 5 5"/>
+  <path d="M6 21h12"/>
+</svg>
+
+                <h3>Revenue</h3>
+            </div>
+            <div class="input-group">
+                <label for="totalRevenue">Total Revenue (₹)</label>
+                <input type="number" id="totalRevenue" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="otherIncome">Other Operating Income (₹)</label>
+                <input type="number" id="otherIncome" placeholder="0" step="0.01">
+            </div>
+        </div>
+
+        <!-- COGS Card -->
+        <div class="input-card">
+            <div class="card-header">
+               <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="6" width="6" height="6" rx="1"/>
+  <rect x="14" y="6" width="6" height="6" rx="1"/>
+  <rect x="9" y="14" width="6" height="6" rx="1"/>
+</svg>
+
+                <h3>Cost of Goods Sold (COGS)</h3>
+            </div>
+            <div class="input-group">
+                <label for="openingStock">Opening Stock (₹)</label>
+                <input type="number" id="openingStock" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="purchases">Purchases (₹)</label>
+                <input type="number" id="purchases" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="closingStock">Closing Stock (₹)</label>
+                <input type="number" id="closingStock" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="directLabor">Direct Labor (₹)</label>
+                <input type="number" id="directLabor" placeholder="0" step="0.01">
+            </div>
+        </div>
+
+        <!-- Operating Expenses Card -->
+        <div class="input-card">
+            <div class="card-header">
+               <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="3"/>
+  <path d="M12 2v3"/>
+  <path d="M12 19v3"/>
+  <path d="M2 12h3"/>
+  <path d="M19 12h3"/>
+  <path d="M5 5l2 2"/>
+  <path d="M17 17l2 2"/>
+</svg>
+
+                <h3>Operating Expenses</h3>
+            </div>
+            <div class="input-group">
+                <label for="rent">Rent / Lease (₹)</label>
+                <input type="number" id="rent" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="salaries">Salaries & Wages (₹)</label>
+                <input type="number" id="salaries" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="utilities">Utilities (₹)</label>
+                <input type="number" id="utilities" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="marketing">Marketing & Advertising (₹)</label>
+                <input type="number" id="marketing" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="adminExpenses">Administrative Expenses (₹)</label>
+                <input type="number" id="adminExpenses" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="depreciation">Depreciation (₹)</label>
+                <input type="number" id="depreciation" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="insurance">Insurance (₹)</label>
+                <input type="number" id="insurance" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="professionalFees">Professional Fees (₹)</label>
+                <input type="number" id="professionalFees" placeholder="0" step="0.01">
+            </div>
+        </div>
+
+        <!-- Financial Charges Card -->
+        <div class="input-card">
+            <div class="card-header">
+                <svg viewBox="0 0 24 24" width="28" height="28"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3v18"/>
+  <path d="M8 7h6"/>
+  <path d="M8 17h6"/>
+  <path d="M16 5l3 3"/>
+  <path d="M19 5l-3 3"/>
+</svg>
+
+                <h3>Financial Charges</h3>
+            </div>
+            <div class="input-group">
+                <label for="interest">Loan Interest (₹)</label>
+                <input type="number" id="interest" placeholder="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="taxRate">Tax Rate (%)</label>
+                <input type="number" id="taxRate" placeholder="0" step="0.01" min="0" max="100">
+            </div>
+        </div>
+
+        <button id="generate-analysis" class="generate-btn">
+            <span class="btn-icon"></span>
+            Generate Analytics
+        </button>
+    </section>
+
+    <!-- ********** OUTPUT SECTION ********** -->
+    <section class="output-section">
+        <!-- Static Analytics Section -->
+        <div id="analytics-section" class="analytics-section" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title">Analysis Results</h2>
+                <p class="section-subtitle">Your financial performance metrics</p>
+            </div>
+
+            <div id="analytics-cards" class="analytics-grid">
+                <!-- Filled by analyzer.js -->
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div id="charts-section" class="charts-section" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title">Visual Insights</h2>
+                <p class="section-subtitle">Interactive charts and graphs</p>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3 class="chart-title">Revenue vs Expenses</h3>
+                    <canvas id="revExpChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Expense Breakdown</h3>
+                    <canvas id="expenseBreakdown"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Profit Margin Trend</h3>
+                    <canvas id="marginChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Revenue Composition</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Insights Section -->
+        <div id="ai-section" class="ai-section" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title">AI-Powered Analysis</h2>
+                <p class="section-subtitle">Intelligent recommendations for your business</p>
+            </div>
+
+            <div id="ai-insights" class="insights-box">
+                <!-- insights.js will place content here -->
+            </div>
+        </div>
+
+        <!-- Comparison Section -->
+        <div id="comparison-section" class="comparison-section" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title">Historical Comparison</h2>
+                <p class="section-subtitle">Compare with previous periods</p>
+            </div>
+
+            <div id="history-section" class="history-wrapper">
+                <!-- comparison.js fills this -->
+            </div>
+
+            <div id="comparison-charts" class="comparison-charts">
+                <!-- Comparison charts will be rendered here -->
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- FLOATING CHATBOT -->
+<div class="chatbot-button" id="chatbot-open" title="Open Financial Assistant">
+    <svg viewBox="0 0 24 24" width="26" height="26"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <!-- Chat bubble -->
+  <path d="M21 14a4 4 0 0 1-4 4H9l-5 3V6a4 4 0 0 1 4-4h9a4 4 0 0 1 4 4z"/>
+  
+  <!-- Bot eyes -->
+  <circle cx="10" cy="10" r="1"/>
+  <circle cx="14" cy="10" r="1"/>
+
+  <!-- Subtle bot antenna -->
+  <path d="M12 2v2"/>
+  <circle cx="12" cy="2" r="0.8"/>
+</svg>
+
+    <span class="chatbot-badge">1</span>
+</div>
+
+<div class="chatbot-window" id="chatbot-window">
+    <div class="chatbot-header">
+        <div class="chatbot-header-info">
+            <span class="chatbot-avatar">🤖</span>
+            <div>
+                <div class="chatbot-title">Monetrix Assistant</div>
+                <div class="chatbot-subtitle">Ask me about financial terms</div>
+            </div>
+        </div>
+        <button id="chatbot-close" class="chatbot-close">×</button>
+    </div>
+
+    <div class="chatbot-body" id="chatbot-body">
+        <div class="bot-msg">
+            <div class="msg-avatar">🤖</div>
+            <div class="msg-content">
+                Hi! I'm your financial assistant. Ask me about terms like "COGS", "Gross Profit", "Net Margin", "Depreciation", or any other financial concept!
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbot-input-box">
+        <input id="chatbot-input" type="text" placeholder="Type a financial term or question...">
+        <button id="chatbot-send" class="chatbot-send-btn">
+            <span>➤</span>
+        </button>
+    </div>
+</div>
+
+<!-- CHART.JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Scripts -->
+<script src="analyzer.js"></script>
+<script src="charts.js"></script>
+<script src="insights.js"></script>
+<script src="comparison.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+</html>

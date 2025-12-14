@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monetrix – Smart Profit & Loss Analyzer</title>
+    <link rel="stylesheet" href="landing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="nav">
+    <div class="nav-container">
+        <div class="nav-left">
+            <img src="assets/logo.svg" alt="Monetrix Logo" class="nav-logo" width="40" height="40" onerror="this.style.display='none'" />
+            <span class="brand-name">Monetrix</span>
+        </div>
+
+        <nav class="nav-right" id="nav-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <button class="login-btn" id="open-login-modal">Sign In</button>
+        </nav>
+        
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+            <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="hero">
+    <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+    
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>AI-Powered Financial Intelligence</span>
+            </div>
+            <h1 class="hero-title">
+                Transform Your Business with
+                <span class="gradient-text">Intelligent Analytics</span>
+            </h1>
+            <p class="hero-description">
+                Unlock the power of data-driven decision making. Monetrix provides comprehensive 
+                profit & loss analysis, real-time insights, and AI-powered recommendations 
+                to help your business thrive.
+            </p>
+            <div class="hero-cta">
+                <a href="analyzer.html" class="cta-btn primary">
+                    <span>Get Started Free</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#services" class="cta-btn secondary">
+                    <span>Explore Features</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Businesses Trust Us</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">AI Support</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-card card-1">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="10" width="3" height="10" rx="1"/>
+  <rect x="9" y="6" width="3" height="14" rx="1"/>
+  <rect x="15" y="3" width="3" height="17" rx="1"/>
+  <path d="M3 20h18"/>
+</svg>
+                </div>
+                <div class="card-text">Revenue Analysis</div>
+            </div>
+            <div class="visual-card card-2">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                 <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+  <path d="M12 1v22"/>
+  <path d="M17 5c0-2-2.2-3-5-3s-5 1-5 3 2.2 3 5 3 5 1 5 3-2.2 3-5 3-5-1-5-3"/>
+</svg>
+
+                </div>
+                <div class="card-text">Profit Tracking</div>
+            </div>
+            <div class="visual-card card-3">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+  <polyline points="3 17 9 11 13 15 21 7"/>
+  <path d="M21 7v6"/>
+  <path d="M3 21h18"/>
+</svg>
+
+                </div>
+                <div class="card-text">Trend Insights</div>
+            </div>
+            <div class="visual-card card-4">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+  <path d="M12 2v4"/>
+  <path d="M12 18v4"/>
+  <path d="M4.9 4.9l2.8 2.8"/>
+  <path d="M16.3 16.3l2.8 2.8"/>
+  <circle cx="12" cy="12" r="4"/>
+</svg>
+
+                </div>
+                <div class="card-text">AI Recommendations</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="section about-section">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-label">About Monetrix</div>
+            <h2 class="section-title">Empowering Business Growth Through Data</h2>
+            <p class="section-subtitle">
+                We transform complex financial data into clear, actionable insights that drive 
+                informed decision-making and sustainable growth.
+            </p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text-wrapper">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Monetrix was founded on the principle that every business, regardless of size, 
+                        deserves access to enterprise-grade financial analytics. Our platform combines 
+                        cutting-edge AI technology with intuitive design to make sophisticated financial 
+                        analysis accessible to everyone.
+                    </p>
+                    <p class="about-paragraph">
+                        We believe that understanding your financial data shouldn't require an accounting 
+                        degree. That's why we've built a platform that translates complex metrics into 
+                        clear insights, actionable recommendations, and visual representations that anyone 
+                        can understand and act upon.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon-wrapper-large">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <circle cx="6" cy="12" r="2"/>
+  <circle cx="12" cy="6" r="2"/>
+  <circle cx="18" cy="12" r="2"/>
+  <circle cx="12" cy="18" r="2"/>
+  <path d="M8 12h4M12 8v4M16 12h-4M12 16v-4"/>
+</svg>
+
+                    </div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>
+                        Advanced algorithms analyze your financial data to reveal patterns, 
+                        trends, and opportunities that might otherwise go unnoticed.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon-wrapper-large">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <rect x="4" y="4" width="16" height="16" rx="4"/>
+  <path d="M8 12h8"/>
+</svg>
+
+                    </div>
+                    <h3>Modern & Elegant</h3>
+                    <p>
+                        Beautiful, intuitive interface that makes complex financial analysis 
+                        accessible to everyone, regardless of technical expertise.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon-wrapper-large">
+                       <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+  <circle cx="9" cy="11" r="1"/>
+  <circle cx="15" cy="11" r="1"/>
+</svg>
+
+                    </div>
+                    <h3>AI-Powered Support</h3>
+                    <p>
+                        Get personalized recommendations and answers to your financial questions 
+                        through our intelligent chatbot assistant.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon-wrapper-large">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/>
+  <rect x="9" y="11" width="6" height="5" rx="1"/>
+  <path d="M10.5 11V9a1.5 1.5 0 0 1 3 0v2"/>
+</svg>
+
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>
+                        Your financial data is encrypted and stored securely. We never share 
+                        your information with third parties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Offer Section -->
+<section id="services" class="section services-section">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-label">Our Services</div>
+            <h2 class="section-title">Comprehensive Financial Solutions</h2>
+            <p class="section-subtitle">
+                Everything you need to understand, analyze, and optimize your business finances
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                   <svg viewBox="0 0 24 24" width="48" height="48"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3v18"/>
+  <rect x="5" y="6" width="4" height="4" rx="1"/>
+  <rect x="15" y="14" width="4" height="4" rx="1"/>
+  <path d="M9 8l3-3 3 3"/>
+  <path d="M15 16l-3 3-3-3"/>
+</svg>
+
+                </div>
+                <h3>Profit & Loss Analysis</h3>
+                <p>
+                    Comprehensive breakdowns of revenue, cost of goods sold, operating expenses, 
+                    and net profit. Understand exactly where your money comes from and where it goes.
+                </p>
+                <ul class="service-features">
+                    <li>Revenue tracking</li>
+                    <li>COGS calculation</li>
+                    <li>Expense categorization</li>
+                    <li>Net margin analysis</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="48" height="48"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="3 15 9 9 13 13 21 5"/>
+  <polyline points="3 19 9 13 13 17 21 9"/>
+</svg>
+
+                </div>
+                <h3>Trend Comparisons</h3>
+                <p>
+                    Compare your current performance with previous months or periods. 
+                    Visualize growth trends and identify areas of improvement.
+                </p>
+                <ul class="service-features">
+                    <li>Month-over-month comparison</li>
+                    <li>Visual trend charts</li>
+                    <li>Performance metrics</li>
+                    <li>Historical data analysis</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="48" height="48"
+     fill="none" stroke="#ffffff" stroke-width="1.8"
+     stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"/>
+  <path d="M12 2v3"/>
+  <path d="M12 19v3"/>
+  <path d="M4.5 12h3"/>
+  <path d="M16.5 12h3"/>
+  <path d="M6.5 6.5l2 2"/>
+  <path d="M15.5 15.5l2 2"/>
+</svg>
+
+                </div>
+                <h3>AI-Powered Insights</h3>
+                <p>
+                    Get intelligent recommendations based on your financial data. 
+                    Our AI analyzes patterns and suggests actionable improvements.
+                </p>
+                <ul class="service-features">
+                    <li>Automated insights</li>
+                    <li>Performance reviews</li>
+                    <li>Optimization suggestions</li>
+                    <li>Risk identification</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+  <path d="M14 2v6h6"/>
+  <path d="M12 12v6"/>
+  <path d="M9 15l3 3 3-3"/>
+</svg>
+
+                </div>
+                <h3>Exportable Reports</h3>
+                <p>
+                    Download your complete analysis as PDF or JSON files. 
+                    Share reports with stakeholders or use them for accounting purposes.
+                </p>
+                <ul class="service-features">
+                    <li>PDF export</li>
+                    <li>JSON data export</li>
+                    <li>Professional formatting</li>
+                    <li>Easy sharing</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                   <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <circle cx="12" cy="12" r="10"/>
+  <path d="M9.5 9a2.5 2.5 0 1 1 4.5 1.5c-.7.7-1.5 1.2-1.5 2.5"/>
+  <circle cx="12" cy="17" r="1"/>
+</svg>
+
+                </div>
+                <h3>Financial Assistant</h3>
+                <p>
+                    Get instant answers to financial questions through our intelligent chatbot. 
+                    Understand complex terms and concepts with ease.
+                </p>
+                <ul class="service-features">
+                    <li>Term definitions</li>
+                    <li>Concept explanations</li>
+                    <li>Best practices</li>
+                    <li>24/7 availability</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6">
+  <rect x="3" y="3" width="8" height="8" rx="2"/>
+  <rect x="13" y="3" width="8" height="5" rx="2"/>
+  <rect x="13" y="10" width="8" height="11" rx="2"/>
+  <rect x="3" y="13" width="8" height="8" rx="2"/>
+</svg>
+
+                </div>
+                <h3>Interactive Dashboards</h3>
+                <p>
+                    Beautiful charts and visualizations that make your financial data 
+                    easy to understand at a glance.
+                </p>
+                <ul class="service-features">
+                    <li>Revenue vs expenses charts</li>
+                    <li>Expense breakdowns</li>
+                    <li>Profit margin visualization</li>
+                    <li>Trend analysis graphs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="section contact-section">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title">We're Here to Help</h2>
+            <p class="section-subtitle">
+                Have questions? Need support? Reach out and we'll get back to you promptly.
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6">
+  <rect x="3" y="5" width="18" height="14" rx="2"/>
+  <path d="M3 7l9 6 9-6"/>
+</svg>
+
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>support@monetrix.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon-wrapper">
+                      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6">
+  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+</svg>
+
+                    </div>
+                    <div class="contact-details">
+                        <h4>Live Chat</h4>
+                        <p>Available 24/7 in-app</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M12 7v5l3 3"/>
+</svg>
+
+                    </div>
+                    <div class="contact-details">
+                        <h4>Response Time</h4>
+                        <p>Within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-email" placeholder="Email Address" required />
+                </div>
+                <div class="form-group">
+                    <textarea id="contact-message" placeholder="Your Message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn primary full-width">
+                    <span>Send Message</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M3.33334 10L16.6667 10M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/logo.svg" alt="Monetrix Logo" class="footer-logo" width="40" height="40" onerror="this.style.display='none'" />
+                <span class="brand-name">Monetrix</span>
+                <p>Smart Profit & Loss Analysis for Small Businesses</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h5>Product</h5>
+                    <a href="#home">Features</a> <br>
+                    <a href="#services">Services</a> <br>
+                    <a href="analyzer.html">Analyzer Tool</a>
+                </div>
+                <div class="footer-column">
+                    <h5>Company</h5>
+                    <a href="#about">About Us</a> <br>
+                    <a href="#contact">Contact</a> <br>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-column">
+                    <h5>Resources</h5>
+                    <a href="#">Documentation</a> <br>
+                    <a href="#">Support</a> <br>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Monetrix. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Login / Signup Modal -->
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="auth-modal">
+        <div class="modal-header">
+            <h3 id="modal-title">Welcome Back</h3>
+            <button id="close-modal" class="close-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <form id="login-form" class="modal-form active">
+            <div class="form-group">
+                <label for="login-email">Email Address</label>
+                <input type="email" placeholder="you@example.com" id="login-email" required />
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" placeholder="Enter your password" id="login-password" required />
+            </div>
+            <button type="submit" class="cta-btn primary full-width">
+                <span>Sign In</span>
+            </button>
+            <p class="switch-text">
+                Don't have an account?
+                <span id="switch-to-signup" class="switch-link">Create Account</span>
+            </p>
+        </form>
+
+        <form id="signup-form" class="modal-form">
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" placeholder="John Doe" id="signup-name" required />
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email Address</label>
+                <input type="email" placeholder="you@example.com" id="signup-email" required />
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" placeholder="Create a password" id="signup-password" required />
+            </div>
+            <button type="submit" class="cta-btn primary full-width">
+                <span>Create Account</span>
+            </button>
+            <p class="switch-text">
+                Already have an account?
+                <span id="switch-to-login" class="switch-link">Sign In</span>
+            </p>
+        </form>
+    </div>
+</div>
+
+<script src="landing.js"></script>
+
+</body>
+</html>
